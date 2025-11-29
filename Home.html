@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JBOY MAKI and BENTI Food House - HOME</title>
+        <link rel="stylesheet" href="MainTheme.css">
+        <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Itim'>
+    </head>
+    <body>
+        <header class="top-header">
+            <div class="section-logo">
+                <img src="logo.png" alt="JBOY Logo">
+                <div class="section-brand-text">
+                    <h1>JBOY</h1>
+                    <p>MAKI and BENTO</p>
+                    <a href="Home.html">
+                        <span class="link-spanner"></span>
+                    </a>
+                </div>
+            </div>
+
+            <input type="text" class="search-bar" placeholder="Search Bar">
+
+            <button class="button-order">ORDER NOW!</button>
+        </header>
+
+        <nav class="navigation-area">
+            <div class="dropdown">
+                <button class="button-dropdown">MENU</button>
+                <div class="content-dropdown">
+                    <a href="Menu/Popular.html">Popular</a>
+                    <a href="Menu/Bento-Rice-Meals.html">Bento Rice Meals</a>
+                    <a href="Menu/Maki-Rolls.html">Maki Rolls</a>
+                    <a href="Menu/Sushi-Rolls.html">Sushi Rolls</a>
+                    <a href="Menu/Salad.html">Salad</a>
+                    <a href="Menu/Ramen.html">Ramen</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="button-dropdown">NOTICES</button>
+                <div class="content-dropdown">
+                    <a href="Notices.html">- Latest Notices 1 -</a>
+                    <a href="Notices.html">- Latest Notices 2 -</a>
+                    <a href="Notices.html">See More</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="button-dropdown"><a href="AboutUs.html">About Us</a></button>
+            </div>
+            <div class="dropdown">
+                <button class="button-dropdown"><a href="ContactUs.html">Contact Us</a></button>
+            </div>
+        </nav>
+
+        <main>
+            <section class="class_greeting">
+                <img id="greet" src="Greetings/Time-Morning.png" alt="Greetings" width="950" height="475" style="align-items: center;">
+            </section>
+
+            <div class="section-divider"></div>
+
+            <section class="section-title">
+                <h2>Foods</h2>
+            </section>
+
+            <section class="food-grid">
+                <div class="food-card"></div>
+                <div class="food-card"></div>
+                <div class="food-card"></div>
+                <div class="food-card"></div>
+
+                <div class="food-card"></div>
+                <div class="food-card"></div>
+                <div class="food-card"></div>
+                <div class="food-card"></div>
+            </section>
+        </main>
+
+        <script>
+            const time = new Date().getHours();
+            const Image_greet = document.getElementById("greet");
+
+            if (time >= 18) {
+                Image_greet.src = "Greetings/Time-Evening.png";
+            } 
+            else if (time >= 13) {
+                Image_greet.src = "Greetings/Time-Afternoon.png";
+            } 
+            else {
+                Image_greet.src = "Greetings/Time-Morning.png";
+            }
+        </script>
+    </body>
+</html>
